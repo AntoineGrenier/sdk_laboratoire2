@@ -40,7 +40,7 @@ namespace LibrairieConversionNote
                     strReturnValue = "SOL";
                     break;
                 default: //Valeur n'est pas dans la liste du haut
-                    strReturnValue = "La note n'existe pas";
+                    strReturnValue = "La note n'existe pas, ok?";
                     break;
             }
             //Retourne la valeur
