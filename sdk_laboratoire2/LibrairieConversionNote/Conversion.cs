@@ -47,6 +47,7 @@ namespace LibrairieConversionNote
             return strReturnValue;
         }
 
+
         /// <summary>
         /// Retourne l'alphanumerique de la note
         /// </summary>
@@ -59,3 +60,21 @@ namespace LibrairieConversionNote
         }
     }
 }
+
+//readonly Dictionary<string, string> alphabeticalToNote = new() {
+//        { "A", "DO" },
+//        { "B", "RE" },
+//        { "C", "MI" },
+//        { "D", "FA" },
+//        { "E", "SOL" },
+//        { "F", "LA" },
+//        { "G", "SI" }
+//    };
+//public string AlphabeticalToNote(string KEY)
+//{
+//    while (!alphabeticalToNote.ContainsKey(KEY))
+//    {
+//        return "Entrée invalide .";
+//    }
+//    return alphabeticalToNote[KEY];
+//}
