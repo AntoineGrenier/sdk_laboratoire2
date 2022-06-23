@@ -17,7 +17,7 @@ while (true)
         while (true)
         {
             Console.Write("Conversion à faire : ");
-            var note = Console.ReadLine();
+            var note = Console.ReadLine().ToUpper();
             var noteRetour = conversionObj.AlphaToNote(note);
             Console.Write(noteRetour);
             Console.WriteLine();
@@ -30,7 +30,7 @@ while (true)
         {
             Console.Write("Conversion à faire : ");
             var note = Console.ReadLine();
-            var noteRetour = "Je ne suis pas implémentée"; //Mettre votre appel ici;
+            var noteRetour = conversionObj.NoteToAlpha(note); //Mettre votre appel ici;
             Console.Write(noteRetour);
             Console.WriteLine();
         }
