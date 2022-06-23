@@ -18,24 +18,36 @@ namespace LibrairieConversionNote
     };
         public string AlphaToNote(string KEY)
         {
-            while (!alphabeticalToNote.ContainsKey(KEY))
+            string strReturnValue = string.Empty;
+            //Vérifie si l'entrée est valide.
+            if (!alphabeticalToNote.ContainsKey(KEY.ToUpper()))
             {
-                return "Entrée invalide .";
+                strReturnValue = "Entrée invalide .";
             }
-            return alphabeticalToNote[KEY];
+            //Retourne la "value" conrespondant a la clé .
+            else strReturnValue = alphabeticalToNote[KEY.ToUpper()];   
+
+            return strReturnValue;                       
         }
         public string NoteToAlpha(string str)
         {
-            while (!alphabeticalToNote.ContainsValue(str))
-            {
-                return "Entrée invalide .";
+            string strReturnValue = string.Empty;
+            //Vérifie si l'entrée est valide.
+            while (!alphabeticalToNote.ContainsValue(str.ToUpper()))
+            {   
+                strReturnValue = "Entrée invalide .";
+               
             }
-            return alphabetic ;
+            foreach (var value in alphabeticalToNote)
+            {
+                if (str.ToUpper() == value.Value.ToString()) { strReturnValue = value.Key.ToString(); }
+            }
+            return strReturnValue;
         }
     }
 }
 
-}
+
 /// Retourne la note du alphanumerique
 /// </summary>
 /// <param name="str">La note alphanumerique</param>
