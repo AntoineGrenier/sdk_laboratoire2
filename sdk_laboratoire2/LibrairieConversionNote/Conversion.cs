@@ -32,15 +32,17 @@ namespace LibrairieConversionNote
         public string NoteToAlpha(string str)
         {
             string strReturnValue = string.Empty;
-            //Vérifie si l'entrée est valide.
-            while (!alphabeticalToNote.ContainsValue(str.ToUpper()))
-            {   
-                strReturnValue = "Entrée invalide .";
-               
-            }
+            
+            //Boucle FOREACH pour verrifier chaque valeur du dictionnair 
             foreach (var value in alphabeticalToNote)
             {
                 if (str.ToUpper() == value.Value.ToString()) { strReturnValue = value.Key.ToString(); }
+            }
+            // si l'entrée n'est valide.
+            if (!alphabeticalToNote.ContainsValue(str.ToUpper()))
+            {
+                strReturnValue = "Entrée invalide .";
+
             }
             return strReturnValue;
         }
