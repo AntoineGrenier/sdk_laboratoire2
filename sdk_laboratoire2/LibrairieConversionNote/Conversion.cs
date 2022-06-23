@@ -4,76 +4,84 @@ namespace LibrairieConversionNote
     /// <summary>
     /// Classe de conversion
     /// </summary>
+
     public class Conversion
     {
-        readonly Dictionary<string, string> alphabeticalToNote = new() {
-        { "A", "LA" },
-        { "B", "SI" },
-        { "C", "DO" },
-        { "D", "RE" },
-        { "E", "MI" },
-        { "F", "FA" },
-        { "G", "SOL" }
-    };
-        public string AlphaToNote(string KEY)
+        /// retourne la note du alphanumerique
+        /// </summary>
+        /// <param name = "str" > la note alphanumerique</param>
+        /// <returns></returns>
+        public string AlphaToNote(string str)
         {
-            while (!alphabeticalToNote.ContainsKey(KEY))
+            //variable de retour
+            string strreturnvalue = string.Empty;
+            //on mets toutes les valeurs passées en majuscules
+            switch (str.ToUpper())
             {
-                return "Entrée invalide .";
+                case "A":
+                    strreturnvalue = "LA";
+                    break;
+                case "B":
+                    strreturnvalue = "SI";
+                    break;
+                case "C":
+                    strreturnvalue = "DO";
+                    break;
+                case "D":
+                    strreturnvalue = "RE";
+                    break;
+                case "E":
+                    strreturnvalue = "Mi";
+                    break;
+                case "F":
+                    strreturnvalue = "FA";
+                    break;
+                case "G":
+                    strreturnvalue = "SOL";
+                    break;
+                default: //valeur n'est pas dans la liste du haut
+                    strreturnvalue = "la note n'existe pas";
+                    break;
             }
-            return alphabeticalToNote[KEY];
+            //retourne la valeur
+            return strreturnvalue;
         }
         public string NoteToAlpha(string str)
         {
-            while (!alphabeticalToNote.ContainsValue(str))
+            string strreturnvalue = string.Empty;
+            switch (str.ToUpper())
             {
-                return "Entrée invalide .";
+                case "LA":
+                    strreturnvalue = "A";
+                    break;
+                case "SI":
+                    strreturnvalue = "B";
+                    break;
+                case "DO":
+                    strreturnvalue = "C";
+                    break;
+                case "RE":
+                    strreturnvalue = "D";
+                    break;
+                case "MI":
+                    strreturnvalue = "E";
+                    break;
+                case "FA":
+                    strreturnvalue = "F";
+                    break;
+                case "SOL":
+                    strreturnvalue = "G";
+                    break;
+                default: //valeur n'est pas dans la liste du haut
+                    strreturnvalue = "la note n'existe pas";
+                    break;
             }
-            return alphabeticalToNote[str];
+            //retourne la valeur
+            return strreturnvalue;
         }
     }
 }
 
-}
-/// Retourne la note du alphanumerique
-/// </summary>
-/// <param name="str">La note alphanumerique</param>
-/// <returns></returns>
-//        public string AlphaToNote(string str)
-//        {
-//            //variable de retour
-//            string strReturnValue = string.Empty;
-//            //On mets toutes les valeurs passées en majuscules
-//            switch (str.ToUpperInvariant())
-//            {
-//                case "A":
-//                    strReturnValue = "LA";
-//                    break;
-//                case "B":
-//                    strReturnValue = "SI";
-//                    break;
-//                case "C":
-//                    strReturnValue = "DO";
-//                    break;
-//                case "D":
-//                    strReturnValue = "RE";
-//                    break;
-//                case "E":
-//                    strReturnValue = "MI";
-//                    break;
-//                case "F":
-//                    strReturnValue = "FA";
-//                    break;
-//                case "G":
-//                    strReturnValue = "SOL";
-//                    break;
-//                default: //Valeur n'est pas dans la liste du haut
-//                    strReturnValue = "La note n'existe pas";
-//                    break;
-//            }
-//            //Retourne la valeur
-//            return strReturnValue;
-//        }
 
 
 //        /// <summary>
@@ -83,4 +91,24 @@ namespace LibrairieConversionNote
 //        /// <returns></returns>
 
 //}
+
+//        readonly Dictionary<string, string> alphabeticalToNote = new() {
+//        { "A", "LA" },
+//        { "B", "SI" },
+//        { "C", "DO" },
+//        { "D", "RE" },
+//        { "E", "MI" },
+//        { "F", "FA" },
+//        { "G", "SOL" }
+//    };
+
+
+//        public string AlphaToNote(string KEY)
+//        {
+//            while (!alphabeticalToNote.ContainsKey(KEY))
+//            {
+//                return "Entrée invalide .";
+//            }
+//            return alphabeticalToNote[KEY];
+//        }
 
