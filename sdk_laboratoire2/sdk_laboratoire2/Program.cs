@@ -17,7 +17,7 @@ while (true)
         while (true)
         {
             Console.Write("Conversion à faire : ");
-            var note = Console.ReadLine();
+            var note = Console.ReadLine().ToUpper();
             var noteRetour = conversionObj.AlphaToNote(note);
             Console.Write(noteRetour);
             Console.WriteLine();
