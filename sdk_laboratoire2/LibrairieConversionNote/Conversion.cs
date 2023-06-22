@@ -19,25 +19,25 @@ namespace LibrairieConversionNote
             switch (str.ToUpperInvariant())
             {
                 case "A":
-                    strReturnValue = "LA";
+                    strReturnValue = "SOL";
                     break;
                 case "B":
-                    strReturnValue = "SI";
+                    strReturnValue = "FA";
                     break;
                 case "C":
-                    strReturnValue = "DO";
+                    strReturnValue = "MI";
                     break;
                 case "D":
                     strReturnValue = "RE";
                     break;
                 case "E":
-                    strReturnValue = "MI";
+                    strReturnValue = "DO";
                     break;
                 case "F":
-                    strReturnValue = "FA";
+                    strReturnValue = "SI";
                     break;
                 case "G":
-                    strReturnValue = "SOL";
+                    strReturnValue = "LA";
                     break;
                 default: //Valeur n'est pas dans la liste du haut
                     strReturnValue = "La note n'existe pas";
