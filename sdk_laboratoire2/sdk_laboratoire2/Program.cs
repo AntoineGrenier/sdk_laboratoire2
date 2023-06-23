@@ -1,4 +1,4 @@
-﻿//Imporation de la librairie
+﻿//Importation de la librairie
 using LibrairieConversionNote;
 
 //Création nouvel objet de notre librairie
@@ -26,11 +26,12 @@ while (true)
     //Si l'utilisateur tape alpha
     else if (input?.ToUpperInvariant() == "ALPHA")
     {
+        //Demander la conversion en boucle
         while (true)
         {
             Console.Write("Conversion à faire : ");
             var note = Console.ReadLine();
-            var noteRetour = "Je ne suis pas implémentée"; //Mettre votre appel ici;
+            var noteRetour = conversionObj.NoteToAlpha(note);
             Console.Write(noteRetour);
             Console.WriteLine();
         }
