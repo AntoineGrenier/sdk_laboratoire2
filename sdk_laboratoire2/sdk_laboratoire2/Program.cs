@@ -7,7 +7,7 @@ Conversion conversionObj = new Conversion();
 //On roule l'application non-stop, tant que CTRL+C
 while (true)
 {
-    Console.Write("Type de conversion à faire : ");
+    Console.Write("Type de conversion à effectuer, tapez 'NOTE' pour convertir un alphabet en note, pour l'inverse tapez 'ALPHA': ");
     var input = Console.ReadLine();
 
     //Si l'utilisateur tape note
@@ -16,9 +16,9 @@ while (true)
         //On demande en boucle la conversion 
         while (true)
         {
-            Console.Write("Conversion à faire : ");
-            var note = Console.ReadLine();
-            var noteRetour = conversionObj.AlphaToNote(note);
+            Console.Write("Entrez la l'alphabet que vous voulez convertir : ");
+            var Alphabet = Console.ReadLine();
+            var noteRetour = conversionObj.AlphaToNote(Alphabet);
             Console.Write(noteRetour);
             Console.WriteLine();
         }
@@ -28,10 +28,10 @@ while (true)
     {
         while (true)
         {
-            Console.Write("Conversion à faire : ");
+            Console.Write("Entrez la note que vous voulez convertir : ");
             var note = Console.ReadLine();
-            var noteRetour = conversionObj.NoteToAlpha(note);
-            Console.Write(noteRetour);
+            var AlphabetRetour = conversionObj.NoteToAlpha(note);
+            Console.Write(AlphabetRetour);
             Console.WriteLine();
         }
     }
