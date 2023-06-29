@@ -19,28 +19,28 @@ namespace LibrairieConversionNote
             switch (str.ToUpperInvariant())
             {
                 case "A":
-                    strReturnValue = "SOL";
+                    strReturnValue = "LA";
                     break;
                 case "B":
-                    strReturnValue = "FA";
+                    strReturnValue = "SI";
                     break;
                 case "C":
-                    strReturnValue = "MI";
+                    strReturnValue = "DO";
                     break;
                 case "D":
                     strReturnValue = "RE";
                     break;
                 case "E":
-                    strReturnValue = "DO";
+                    strReturnValue = "MI";
                     break;
                 case "F":
-                    strReturnValue = "SI";
+                    strReturnValue = "FA";
                     break;
                 case "G":
-                    strReturnValue = "LA";
+                    strReturnValue = "SOL";
                     break;
                 default: //Valeur n'est pas dans la liste du haut
-                    strReturnValue = "La note n'existe pas";
+                    strReturnValue = "La lettre n'existe pas";
                     break;
             }
             //Retourne la valeur
@@ -55,6 +55,33 @@ namespace LibrairieConversionNote
         public string NoteToAlpha(string str)
         {
             string strReturnValue = string.Empty;
+              switch (str.ToUpperInvariant())
+            {
+                case "LA":
+                    strReturnValue = "A";
+                    break;
+                case "SI":
+                    strReturnValue = "B";
+                    break;
+                case "DO":
+                    strReturnValue = "C";
+                    break;
+                case "RE":
+                    strReturnValue = "D";
+                    break;
+                case "MI":
+                    strReturnValue = "E";
+                    break;
+                case "FA":
+                    strReturnValue = "F";
+                    break;
+                case "SOL":
+                    strReturnValue = "G";
+                    break;
+                default: //Valeur n'est pas dans la liste du haut
+                    strReturnValue = "La note n'existe pas";
+                    break;
+            }
             return strReturnValue;
         }
     }
