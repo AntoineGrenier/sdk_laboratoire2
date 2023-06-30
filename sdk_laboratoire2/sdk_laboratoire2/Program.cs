@@ -7,7 +7,7 @@ Conversion conversionObj = new Conversion();
 //On roule l'application non-stop, tant que CTRL+C
 while (true)
 {
-    Console.Write("Type de conversion à faire : ");
+    Console.Write("Type de conversion à faire (choisissez ALPHA pour la conversion Note vers alphabétique et NOTE pour alphabétique vers Note ) : ");
     var input = Console.ReadLine();
 
     //Si l'utilisateur tape note
@@ -30,7 +30,7 @@ while (true)
         {
             Console.Write("Conversion à faire : ");
             var note = Console.ReadLine();
-            var noteRetour = "Je ne suis pas implémentée"; //Mettre votre appel ici;
+            var noteRetour = conversionObj.NoteToAlpha(note); // Appel à la méthode NoteToAlpha
             Console.Write(noteRetour);
             Console.WriteLine();
         }
