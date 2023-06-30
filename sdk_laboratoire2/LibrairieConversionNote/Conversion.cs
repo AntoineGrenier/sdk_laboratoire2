@@ -54,8 +54,38 @@ namespace LibrairieConversionNote
         /// <returns></returns>
         public string NoteToAlpha(string str)
         {
-            string strReturnValue = string.Empty;
-            return strReturnValue;
+            string strRLaboValue2 = string.Empty;
+
+            switch (str.ToUpperInvariant())
+            {
+                case "LA":
+                    strRLaboValue2 = "A";
+                    break;
+                case "SI":
+                    strRLaboValue2 = "B";
+                    break;
+                case "DO":
+                    strRLaboValue2 = "C";
+                    break;
+                case "RE":
+                    strRLaboValue2 = "D";
+                    break;
+                case "MI":
+                    strRLaboValue2 = "E";
+                    break;
+                case "FA":
+                    strRLaboValue2 = "F";
+                    break;
+                case "SOL":
+                    strRLaboValue2 = "G";
+                    break;
+                default: //Valeur n'est pas dans la liste du haut
+                    strRLaboValue2 = "La note n'existe pas";
+                    break;
+
+                
+            }
+            return strRLaboValue2;
         }
     }
 }
