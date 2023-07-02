@@ -21,7 +21,7 @@ while (true)
             var noteRetour = conversionObj.AlphaToNote(note);
             Console.Write(noteRetour);
             Console.WriteLine();
-            test 2
+            test 2 2
         }
     }
     //Si l'utilisateur tape alpha
