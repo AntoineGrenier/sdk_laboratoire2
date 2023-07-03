@@ -18,10 +18,10 @@ while (true)
         {
             Console.Write("Conversion à faire : ");
             var note = Console.ReadLine();
-            var noteRetour = conversionObj.AlphaToNote(note);
+            var noteRetour = conversionObj.NoteToAlpha(note);
             Console.Write(noteRetour);
             Console.WriteLine();
-            test 2 2
+            
         }
     }
     //Si l'utilisateur tape alpha
