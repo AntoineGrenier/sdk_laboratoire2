@@ -1,16 +1,14 @@
-﻿//Notre librairie
+﻿
 namespace LibrairieConversionNote
 {
-    /// <summary>
-    /// Classe de conversion
-    /// </summary>
+
     public class Conversion
     {
-        /// <summary>
-        /// Retourne la note du alphanumerique
-        /// </summary>
-        /// <param name="str">La note alphanumerique</param>
-        /// <returns></returns>
+       
+        /// Retourne la note alphanumerique
+       
+        /// <param name="string">La note alphanumerique</param>
+
         public string AlphaToNote(string str)
         {
             //variable de retour
@@ -39,22 +37,49 @@ namespace LibrairieConversionNote
                 case "G":
                     strReturnValue = "SOL";
                     break;
-                default: //Valeur n'est pas dans la liste du haut
-                    strReturnValue = "La note n'existe pas";
+                default: //La Valeur n'est pas dans la liste du haut
+                    strReturnValue = "Ya pas de lettre rechercher, Entrer une lettre entre A et G:";
                     break;
             }
             //Retourne la valeur
             return strReturnValue;
         }
 
-        /// <summary>
-        /// Retourne l'alphanumerique de la note
-        /// </summary>
-        /// <param name="str">La note musicale</param>
-        /// <returns></returns>
+        
+        /// Retourne la valeur alphanumerique de la note
+        
+        /// <param name="string">La note</param>
+        
         public string NoteToAlpha(string str)
         {
             string strReturnValue = string.Empty;
+            switch (str.ToUpperInvariant())
+            {
+                case "LA":
+                    strReturnValue= "A";
+                    break;
+                case "SI":
+                    strReturnValue= "B";
+                    break;
+                case "DO":
+                    strReturnValue= "C";
+                    break;
+                case "RE":
+                    strReturnValue= "D";
+                    break;
+                case "MI":
+                    strReturnValue= "E";
+                    break;
+                case "FA":
+                    strReturnValue= "F";
+                    break;
+                case "SOL":
+                    strReturnValue= "G";
+                    break;
+                default:
+                    strReturnValue = "Ya pas la NOTE rechercher, Entrer une NOTE entre DO, RE, MI, FA, SOL, LA ou SI : ";
+                    break;
+            }
             return strReturnValue;
         }
     }
